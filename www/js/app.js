@@ -4,7 +4,7 @@
 // 'euro15' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'euro15.controllers' is found in controllers.js
-angular.module('euro15', ['ionic', 'euro15.controllers'])
+angular.module('euro15', ['ionic', 'euro15.controllers', 'euro15.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -54,6 +54,12 @@ angular.module('euro15', ['ionic', 'euro15.controllers'])
           templateUrl: "templates/itinerary.html",
           controller: 'ItineraryCtrl'
         }
+      },
+      resolve: {
+        itinerary: function(itineraryService) {
+          // bind data to itinerary
+          return itineraryService.getItinerary();
+        }
       }
     })
 
@@ -63,6 +69,12 @@ angular.module('euro15', ['ionic', 'euro15.controllers'])
       'menuContent': {
         templateUrl: "templates/city.html",
         controller: 'CityCtrl'
+      }
+    },
+    resolve: {
+      city: function($stateParams, itineraryService) {
+        // bind data to city
+        return itineraryService.getCity($stateParams.cityName);
       }
     }
   });

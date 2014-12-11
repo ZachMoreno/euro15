@@ -1,5 +1,28 @@
-<ion-view view-title="Itinerary">
-  <ion-content>
-    <h1>City Name</h1>
-  </ion-content>
+<ion-view view-title="{{ city.name }}">
+	<ion-content class="grey-background">
+	  	<div class="header-{{ city.name }}">
+			<h2 class="title">{{ city.name }}</h2>
+		</div>
+
+		<img ng-src="img/{{ city.name }}-cover.png" class="pull-over-header">
+
+		<div class="card">
+			<h4 class="center-text">{{ city.startDate }} &#x2192; {{ city.endDate }}</h4>
+		</div> <!-- end .card -->
+
+		<div class="card" ng-repeat="day in city.agenda">
+			<h3 class="center-text">{{ day.date }}</h3>
+
+			<ul class="list">
+				<li ng-repeat="item in day.items">
+					<div class="item-title">	{{ item.title }}
+					</div>
+
+					<div class="item-times">
+						{{ item.startTime }} &#x2192; {{ item.endTime }}
+					</div>
+				</li>
+			</ul>
+		</div> <!-- end .card -->
+	</ion-content>
 </ion-view>
