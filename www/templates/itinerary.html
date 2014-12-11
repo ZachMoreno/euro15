@@ -5,17 +5,21 @@
 
 	<ion-content>
 		<ion-list>
+<<<<<<< HEAD
 			<ion-item class="grey-background" ng-href="#/app/itinerary/{{city.id}}">
+=======
+			<ion-item class="grey-background" ng-href="#/app/itinerary/{{city.name}}">
+>>>>>>> origin/gh-pages
 				<!-- <a ng-href="#/app/itinerary/{{city.name}}"> -->
 					<div class="list card" ng-repeat="city in itinerary">
 						<div class="item item-avatar">
-							<img ng-src="img/{{ city.name }}-avatar.png">
+							<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-avatar.png">
 							<h2>{{ city.name }}</h2>
 							<p>{{ city.country }}</p>
 						</div>
 
 						<div class="item item-image">
-							<img ng-src="img/{{ city.name }}-cover.png">
+							<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-cover.png">
 						</div>
 
 						<!-- <div class="item">
