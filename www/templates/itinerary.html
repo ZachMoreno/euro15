@@ -1,13 +1,13 @@
 <ion-view view-title="Itinerary">
-	<div class="bar bar-subheader bar-steamy">
+	<!-- <div class="bar bar-subheader bar-steamy">
 		<h2 class="title">itinerary</h2>
-	</div>
+	</div> -->
 
-	<ion-content class="has-subheader">
+	<ion-content>
 		<ion-list>
-			<ion-item class="grey-background">
+			<ion-item class="grey-background" ng-href="#/app/itinerary/{{city.id}}">
 				<!-- <a ng-href="#/app/itinerary/{{city.name}}"> -->
-					<div class="list card" ng-repeat="city in cities">
+					<div class="list card" ng-repeat="city in itinerary">
 						<div class="item item-avatar">
 							<img ng-src="img/{{ city.name }}-avatar.png">
 							<h2>{{ city.name }}</h2>
