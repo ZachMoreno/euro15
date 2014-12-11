@@ -1,9 +1,9 @@
 <ion-view view-title="Itinerary">
-	<!-- <div class="bar bar-subheader">
-		<h2 class="title">Itinerary</h2>
-	</div> -->
+	<div class="bar bar-subheader bar-steamy">
+		<h2 class="title">itinerary</h2>
+	</div>
 
-	<ion-content>
+	<ion-content class="has-subheader">
 		<ion-list>
 			<ion-item class="grey-background">
 				<!-- <a ng-href="#/app/itinerary/{{city.name}}"> -->
@@ -25,12 +25,16 @@
 
 						<ion-list>
 							<ion-item ng-repeat="day in city.agenda">
-								<h2 class="center-text">{{ day.date }}</h2>
+								<h3 class="center-text">{{ day.date }}</h3>
 
-								<ul class="list" ng-repeat="item in day.items">
-									<li>
-										<strong>{{ item.title }}</strong>
-										<br>{{ item.startTime }} &#x2192; {{ item.endTime }}
+								<ul class="list">
+									<li ng-repeat="item in day.items">
+										<div class="item-title">	{{ item.title }}
+										</div>
+
+										<div class="item-times">
+											{{ item.startTime }} &#x2192; {{ item.endTime }}
+										</div>
 									</li>
 								</ul>
 							</ion-item>

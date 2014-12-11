@@ -53,6 +53,11 @@ angular.module('euro15.controllers', [])
             "title": "Giordano's",
             "startTime": "6:00pm",
             "endTime": "7:30pm"
+          },
+          {
+            "title": "Adler Planetarium",
+            "startTime": "8:00pm",
+            "endTime": "9:30pm"
           } 
         ]
       }  
@@ -62,7 +67,34 @@ angular.module('euro15.controllers', [])
     "name": "Edinburgh",
     "country": "Scotland",
     "startDate": "Fri Sept 4",
-    "endDate": "Sun Sept 6"
+    "endDate": "Sun Sept 6",
+    "agenda": [
+      {
+        "date": "Fri Sept 4",
+        "items": [
+          {
+            "title": "Edinburgh Castle",
+            "startTime": "9:00am",
+            "endTime": "12:00pm"
+          },
+          {
+            "title": "The Scotch Whisky Experience",
+            "startTime": "1:00pm",
+            "endTime": "2:30pm"
+          }
+        ]
+      },
+      {
+        "date": "Sat Sept 5",
+        "items": [
+          {
+            "title": "Sterling Castle",
+            "startTime": "11:00am",
+            "endTime": "5:00pm"
+          }
+        ]
+      }  
+    ]
   },
   {
     "name": "Amsterdam",
