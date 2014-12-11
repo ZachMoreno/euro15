@@ -1,0 +1,43 @@
+<ion-view view-title="Itinerary">
+	<!-- <div class="bar bar-subheader">
+		<h2 class="title">Itinerary</h2>
+	</div> -->
+
+	<ion-content>
+		<ion-list>
+			<ion-item class="grey-background">
+				<!-- <a ng-href="#/app/itinerary/{{city.name}}"> -->
+					<div class="list card" ng-repeat="city in cities">
+						<div class="item item-avatar">
+							<img ng-src="/img/{{ city.name }}-avatar.png">
+							<h2>{{ city.name }}</h2>
+							<p>{{ city.country }}</p>
+						</div>
+
+						<div class="item item-image">
+							<img ng-src="/img/{{ city.name }}-cover.png">
+						</div>
+
+						<!-- <div class="item">
+							<p>start - <strong>{{ city.startDate }}</strong></p>
+							<p>end - <strong>{{ city.endDate }}</strong></p>
+						</div> -->
+
+						<ion-list>
+							<ion-item ng-repeat="day in city.agenda">
+								<h2 class="center-text">{{ day.date }}</h2>
+
+								<ul class="list" ng-repeat="item in day.items">
+									<li>
+										<strong>{{ item.title }}</strong>
+										<br>{{ item.startTime }} &#x2192; {{ item.endTime }}
+									</li>
+								</ul>
+							</ion-item>
+						</ion-list>
+					</div>
+				<!-- </a> -->
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
