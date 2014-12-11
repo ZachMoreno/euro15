@@ -4,7 +4,7 @@
 			<h2 class="title">{{ city.name }}</h2>
 		</div>
 
-		<img ng-src="http://zachmoreno.github.io/euro15/img/{{ city.name }}-cover.png" class="pull-over-header">
+		<img ng-src="http://zachmoreno.github.io/euro15/img/{{ city.name | lowercase }}-cover.png" class="pull-over-header">
 
 		<div class="card">
 			<h4 class="center-text">{{ city.startDate }} &#x2192; {{ city.endDate }}</h4>
