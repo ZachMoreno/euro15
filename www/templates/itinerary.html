@@ -3,49 +3,23 @@
 		<h2 class="title">itinerary</h2>
 	</div> -->
 
-	<ion-content>
-		<ion-list>
-<<<<<<< HEAD
-			<ion-item class="grey-background" ng-href="#/app/itinerary/{{city.id}}">
-=======
-			<ion-item class="grey-background" ng-href="#/app/itinerary/{{city.name}}">
->>>>>>> origin/gh-pages
-				<!-- <a ng-href="#/app/itinerary/{{city.name}}"> -->
-					<div class="list card" ng-repeat="city in itinerary">
-						<div class="item item-avatar">
-							<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-avatar.png">
-							<h2>{{ city.name }}</h2>
-							<p>{{ city.country }}</p>
-						</div>
+	<ion-content class="grey-background">
+		<a ng-repeat="city in itinerary" ng-href="#/app/itinerary/{{ city.name }}" alt="{{ city.name }}">
+			<div class="card">
+				<div class="item item-avatar">
+					<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-avatar.png">
+					<h2>{{ city.name }}</h2>
+					<p>{{ city.country }}</p>
+				</div>
 
-						<div class="item item-image">
-							<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-cover.png">
-						</div>
+				<div class="item item-image">
+					<img ng-src="https://raw.githubusercontent.com/ZachMoreno/euro15/master/www/img//{{ city.name | lowercase }}-cover.png">
+				</div>
 
-						<!-- <div class="item">
-							<p>start - <strong>{{ city.startDate }}</strong></p>
-							<p>end - <strong>{{ city.endDate }}</strong></p>
-						</div> -->
-
-						<ion-list>
-							<ion-item ng-repeat="day in city.agenda">
-								<h3 class="center-text">{{ day.date }}</h3>
-
-								<ul class="list">
-									<li ng-repeat="item in day.items">
-										<div class="item-title">	{{ item.title }}
-										</div>
-
-										<div class="item-times">
-											{{ item.startTime }} &#x2192; {{ item.endTime }}
-										</div>
-									</li>
-								</ul>
-							</ion-item>
-						</ion-list>
-					</div>
-				<!-- </a> -->
-			</ion-item>
-		</ion-list>
+				<div class="item">
+					<h3 class="center-text">{{ city.startDate }} &#x2192; {{ city.endDate }}</h3>
+				</div>
+			</div>
+		</a>
 	</ion-content>
 </ion-view>
